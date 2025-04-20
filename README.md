@@ -1,35 +1,41 @@
 # Tunisie Annonce Scraper
 
-This project scrapes real estate listings from Tunisie Annonce and stores the data in a PostgreSQL database. The data is exposed via a Flask API.
+This project scrapes real estate listings from Tunisie Annonce and stores the data in a PostgreSQL database. The data is exposed via a Flask API and visualized in a Dash dashboard.
 
 ## Features
-- Scrapes listings using BeautifulSoup and requests.
-- Saves data to a PostgreSQL database.
-- Exposes data via a Flask API.
+- Web scraping using BeautifulSoup and requests
+- PostgreSQL database storage
+- Flask API endpoints
+- Interactive Dash dashboard
 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/tunisie-annonce-scraper.git
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
+   git clone https://github.com/Nadia371/tunisie-annonce-scraper.git
+   cd tunisie-annonce-scraper
+## Install dependencies:
+pip install -r requirements.txt
 ## Usage
 1. Run the scraper:
-   ```bash
-   python scraper/scraper.py
-   ```
+python scraper/scraper.py
 2. Start the API:
-   ```bash
-   python api/app.py
-   ```
-
+python api/app.py
+3. Launch the dashboard:
+python dashboard/app.py
 ## API Endpoints
-- `GET /annonces`: Returns all listings.
-- `POST /scrape`: Triggers a new scraping session.
+GET /annonces - Get all listings
+POST /scrape - Trigger new scrape
+
+## Dashboard
+Access at http://localhost:8050 after starting. Features:
+
+Price distribution charts
+
+Property type analysis
+
+Location filters
+
+Real-time data refresh
 
 ## Database
-- Data is stored in a PostgreSQL database. Use PgAdmin to view the `annonces` table.
+PostgreSQL database with annonces table. Use PgAdmin to view data.
